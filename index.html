@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NAN Squad</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background-color: grey;
+        }
+
+        .section {
+            display: none;
+            text-align: left;
+            margin: 20px auto;
+            width: 80%; /* Aumentado para mejor visualización en el ejemplo */
+        }
+
+        .doxeo {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+
+        .doxeo h3 {
+            margin-top: 0;
+        }
+
+        #mainContent {
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            var mainContent = document.getElementById('mainContent');
+            var doxesList = document.getElementById('doxesList');
+
+            
+            mainContent.style.display = 'none';
+            
+            doxesList.style.display = 'block';
+
+           
+            var sections = document.querySelectorAll('.section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = 'none';
+            }
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function goBack() {
+            var mainContent = document.getElementById('mainContent');
+            var doxesList = document.getElementById('doxesList');
+
+          
+            doxesList.style.display = 'none';
+          
+            mainContent.style.display = 'block';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="mainContent">
+        <div id="buttons">
+            <button class="button" onclick="showSection('doxes')">Doxes</button>
+            <button class="button" onclick="showSection('payasos')">Payasos</button>
+            <button class="button" onclick="showSection('cracked')">Cracked</button>
+        </div>
+        <br>
+        <img src="https://imgs.search.brave.com/JcUL3sjWxbNYKQUaGWHlylg8iV1v7Ul-Ba9MIjxJ1N4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MTAvU0NQLUVtYmxl/bS03MDB4Mzk0LnBu/Zw" alt="NAN Squad Logo">
+        <h1>discord.gg/nansquad</h1>
+        <h1>pagina oficial</h1>
+    </div>
+
+    <div id="doxesList" style="display: none;">
+        <button class="button" onclick="goBack()">⬅️</button>
+        <div class="section" id="doxes">
+            <h2>Doxes</h2>
+            <div class="doxeo">
+                <h3>Vacant</h3>
+                <p>Vacant</p>
+                <p><strong>BY</strong> Vacant</p>
+            </div>
+            
+        </div>
+
+        <div class="section" id="payasos" style="display: none;">
+            <h2>Payasos</h2>
+            <div class="doxeo">
+                <h3>Vacant</h3>
+                <p>Vacant</p>
+                <p><strong>Exposed by:</strong> Vacant</p>
+            </div>
+            
+        </div>
+
+        <div class="section" id="cracked" style="display: none;">
+            <h2>Cracked</h2>
+            <div class="doxeo">
+                <h3>Vacant</h3>
+                <p>Vacant</p>
+                <p><strong>BY:</strong> Vacant</p>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>
